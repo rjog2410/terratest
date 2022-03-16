@@ -3,22 +3,21 @@ variable "AWS_ACCESS_KEY_ID" {
 }
 variable "AWS_SECRET_ACCESS_KEY" {
   type        = string
-  description = ""
 }
 
 variable "bucket" {
   type  = string
-  value = "Bucket S3 RJOG"
+  default = "Bucket S3 RJOG"
 }
 
 variable "content" {
   type  = string
-  value = "Class terraform RJOG"
+  default = "Class terraform RJOG"
 }
 
 variable "region" {
   type  = string
-  value = "us-east-2"
+  default = "us-east-2"
 }
 
 provider "aws" {
