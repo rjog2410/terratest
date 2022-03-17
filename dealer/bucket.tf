@@ -27,7 +27,7 @@ provider "aws" {
   secret_key = var.AWS_SECRET_ACCESS_KEY
 }
 
-resource "aws_s3_bucket" "bucket1" {
+resource "aws_s3_bucket" "bucket2" {
   bucket = var.bucket
   acl    = "public-read"
   website {
@@ -35,7 +35,7 @@ resource "aws_s3_bucket" "bucket1" {
   }
 }
 resource "aws_s3_bucket_object" "object1" {
-  bucket       = aws_s3_bucket.bucket1.bucket
+  bucket       = aws_s3_bucket.bucket2.bucket
   key          = "index.html"
   acl          = "public-read"
   content      = var.content
