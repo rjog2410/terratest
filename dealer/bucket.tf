@@ -1,3 +1,10 @@
+terraform {
+  required_providers {
+    aws     = "hashicorp/aws"
+    version = "~>3.0"
+  }
+}
+
 provider "aws" {
   region     = var.region
   profile    = "test_profile"
